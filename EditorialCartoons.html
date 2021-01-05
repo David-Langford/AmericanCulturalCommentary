@@ -1,0 +1,236 @@
+<doctype html>
+<HTML>
+
+<body>
+	<width  : 100%;>
+	<height : 100%;>
+
+	<head>
+		<meta charset="UTF-8" >
+		<meta http-equiv="X-UA-compatible" content="ie=edge" >
+
+		<meta name="viewport"    content="width=device-width, initial-scale=1.0 >
+		<meta name="description" content="U.S. Political Editorial Cartoons">
+		<meta name="keywords"    content="American, Politics, Culture, Satire">
+		<meta name="author"      content="D.W.Langford">
+
+		<link href=".\Styles\main.css" rel="stylesheet">
+		<title>Political and Cultural Reflections Expressed in Satire</title>
+	</head>
+
+	<main>
+	<header>
+		<img src=".\\GraphicDisplay\\PoliticallyUncorrect.jpg" alt="Politically Uncorrect">;
+	</header>
+
+	<!---------- Web page navigation objects. ------------->
+
+	<nav>
+		<a href="index.html">Home Page</a>
+		&bull;
+		<a href = "constitution.html">U.S. Constitution</a>
+		&bull;
+		<a>Editorial Cartoons 2020</a>
+	</nav>
+	
+	<!-- Web page disclaimer. -->
+
+	<hr>
+	The following "humor" is meant to encourage discussion and make you think.  If you find you can neither
+	<BR>
+	discuss nor think, please go elsewhere for your entertainment.  I don't need the aggravation.  Thank you.
+	<hr>
+
+	<!-- Container (div) objects for handling the web page interface. -->
+
+	<div class="float-container">
+
+		<!-- List box of available cartoon graphics. -->
+
+	  	<div class="float-child-left" >
+			Available Cartoons, click to select:
+			<ul id="cartoonList">
+				<input type="radio" name="cartoon" value="26" onclick="handleClick(this);" > Senile Congress <br>
+				<input type="radio" name="cartoon" value="25" onclick="handleClick(this);" > Country Overthrown <br>
+				<input type="radio" name="cartoon" value="24" onclick="handleClick(this);" > Scarecrow Syndrome <br>
+				<input type="radio" name="cartoon" value="23" onclick="handleClick(this);" > Wanted: Socialist Leader <br>
+				<input type="radio" name="cartoon" value="22" onclick="handleClick(this);" > Education Dumb Down <br>
+				<input type="radio" name="cartoon" value="21" onclick="handleClick(this);" > Voting Expenses <br>
+				<input type="radio" name="cartoon" value="20" onclick="handleClick(this);" > Ballot Chain Of Custody <br>
+				<input type="radio" name="cartoon" value="19" onclick="handleClick(this);" > Election Fraud <br>
+				<input type="radio" name="cartoon" value="18" onclick="handleClick(this);" > Never See a Smile <br>
+				<input type="radio" name="cartoon" value="17" onclick="handleClick(this);" > Editorial Cartoonist <br>
+				<input type="radio" name="cartoon" value="16" onclick="handleClick(this);" > Mercy In / Mercy Out <br>
+				<input type="radio" name="cartoon" value="15" onclick="handleClick(this);" > Diversity of Thought <br>
+				<input type="radio" name="cartoon" value="14" onclick="handleClick(this);" > Covid Lockdown Forever <br>
+				<input type="radio" name="cartoon" value="13" onclick="handleClick(this);" > Americans Are Like Toads <br>
+				<input type="radio" name="cartoon" value="12" onclick="handleClick(this);" > Ruling in Hell <br>
+				<input type="radio" name="cartoon" value="11" onclick="handleClick(this);" > Churches Closed <br>
+				<input type="radio" name="cartoon" value="10" onclick="handleClick(this);" > Millie Weaver Arrest <br>
+				<input type="radio" name="cartoon" value="9"  onclick="handleClick(this);" > Nobody Can See You Smile <br>
+				<input type="radio" name="cartoon" value="8"  onclick="handleClick(this);" > Open Season On Minors <br>
+				<input type="radio" name="cartoon" value="7"  onclick="handleClick(this);" > Retro Smart Phones <br>
+				<input type="radio" name="cartoon" value="6"  onclick="handleClick(this);" > Whose Government? <br>
+				<input type="radio" name="cartoon" value="5"  onclick="handleClick(this);" > State Emergency Preparedness <br>
+				<input type="radio" name="cartoon" value="4"  onclick="handleClick(this);" > Flag Burning <br>
+				<input type="radio" name="cartoon" value="3"  onclick="handleClick(this);" > Nazi Government <br>
+				<input type="radio" name="cartoon" value="2"  onclick="handleClick(this);" > Store Vs. Riot <br>
+				<input type="radio" name="cartoon" value="1"  checked onclick="handleClick(this);" > Masks or Not <br>
+			</ul>
+	  	</div>
+
+		<!-- Container for jpg file objects. The process used here could not be made to work with PDF files. -->
+
+  		<div class="float-child-right" id="imageDiv">
+//     		<img src=".\GraphicHumor\JpegFiles\MaskWearOrRemove.jpg" alt="MaskWearOrRemove">;
+     		<img src=" " alt=" ">;
+  		</div>
+
+	</div>
+
+	</main>
+
+<!-- ------------ JavaScript code for swapping jpg files into and out of a container object. -->
+
+	<script type="text/javascript">
+
+		// This function will replace the contents of a container object. (unused)
+
+		function ReplaceContentInContainer(id,content)
+		{
+			var container = document.getElementById(id);
+			container.innerHTML = content;
+		}
+
+		// This function will get the event target in a browser-compatible way. (unused)
+
+		function getEventTarget(e)
+		{
+    		e = e || window.event;
+    		return e.target || e.srcElement; 
+		}
+
+		// Primary script for updating the div container with a new image file.
+
+		function handleClick(radioBtn)
+		{
+			// Get the list item that was clicked on (target) and the div object to write to.
+	
+			//var target = getEventTarget(event);
+			var dv = document.getElementById('imageDiv');
+
+			// Create image object to be loaded.
+
+			var nextImage = document.createElement("img");
+
+			// Build the HTML for displaying the selected graphic.  Note use of escape character in text strings, "\".
+			
+			//switch (target.value)
+			switch (radioBtn.value)
+			{
+				case "1":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\MaskWearOrRemove.jpg\" alt=\"Mask Wear Or Remove\">";
+					break;
+				case "2":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\StoreVersusRiot.jpg\" alt=\"Store vs. Riot\">";
+					break;
+				case "3":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\NaziGovernment.jpg\" alt=\"Nazi Government\">";
+					break;
+				case "4":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\FlagBurning.jpg\" alt=\"FLag Burning\">";
+					break;
+				case "5":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\WaStateEmergencyPreparedness.jpg\" alt=\"Wa State Emergency Preparedness\">";
+					break;
+				case "6":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\WhoseGovernment.jpg\" alt=\"Whose Government?\">";
+					break;
+				case "7":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\StolenSmartPhones.jpg\" alt=\"Stolen Smart Phones\">";
+					break;
+				case "8":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\OpenSeasonOnMinors.jpg\" alt=\"Open Season On Minors\">";
+					break;
+				case "9":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\NobodyCanSeeYouSmile.jpg\" alt=\"Nobody can see you Smile\">";
+					break;
+				case "10":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\MillieWeaverArrest.jpg\" alt=\"Millie Weaver Arrest\">";
+					break;
+				case "11":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\ChurchesClosed.jpg\" alt=\"Churches Closed\">";
+					break;
+				case "12":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\RuleInHell.jpg\" alt=\"Rule In Hell\">";
+					break;
+				case "13":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\AmericansAreLikeToads.jpg\" alt=\"Americans Are Like Toads\">";
+					break;
+				case "14":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\CovidLockdownForever.jpg\" alt=\"Covid Lockdown Forever\">";
+					break;
+				case "15":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\DiversityOfThought.jpg\" alt=\"Diversity of Thought\">";
+					break;
+				case "16":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\MercyInMercyOut.jpg\" alt=\"Mercy In Mercy Out\">";
+					break;
+				case "17":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\EditorialCartoonist.jpg\" alt=\"Editorial Cartoonist\">";
+					break;
+				case "18":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\NeverSeeASmile.jpg\" alt=\"Never see a Smile\">";
+					break;
+				case "19":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\ElectionFraud.jpg\" alt=\"Election Fraud\">";
+					break;
+				case "20":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\ChainOfCustodyBallots.jpg\" alt=\"Chain of Custody for Ballots\">";
+					break;
+				case "21":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\VotingExpenses.jpg\" alt=\"Voting Expenses\">";
+					break;
+				case "22":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\EducationDumbDown.jpg\" alt=\"Dumbing Down Education\">";
+					break;
+				case "23":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\SocialistLeaderWanted.jpg\" alt=\"Socialist Leader Wanted\">";
+					break;
+				case "24":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\ScarecrowSyndrome.jpg\" alt=\"Scarecrow Syndrome\">";
+					break;
+				case "25":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\CountryOverthrown.jpg\" alt=\"Country Overthrown\">";
+					break;
+				case "26":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\SenileCongress.jpg\" alt=\"Senile Congress\">";
+					break;
+					
+				default:
+					nextImage = "";
+			}
+	
+			// Display the chosen graphic.
+			dv.innerHTML = nextImage;
+			
+		};  
+
+		// Event fires after the page has fully loaded.
+
+        addEventListener('load', (event) => 
+		{
+			// Load the default graphic in the image div.
+
+			var dv = document.getElementById('imageDiv');
+     		var nextImage = document.createElement("img");
+			nextImage = "<img src=\".\\GraphicHumor\\Graphics2020\\JpegFiles\\MaskWearOrRemove.jpg\" alt=\"Mask wear or Remove\">";
+			dv.innerHTML = nextImage;
+        });
+
+	</script>
+	
+	</body>
+
+</HTML>
+

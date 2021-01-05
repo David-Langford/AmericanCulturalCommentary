@@ -1,0 +1,67 @@
+body {
+	background:white;
+	font-family:arial;
+}
+
+h1 {
+	color:green;
+}
+
+h2 {
+	color:222;
+}
+
+p {
+	background:white;
+	color:black;
+	padding: 2px 10px;   <!-- comment: 1 value is all margins. 2 is topbottom, leftright.  4 is top, right, bottom, left -->
+}
+
+nav {
+	padding: 10px;  <!-- comment: 1 value is all margins. 2 is topbottom, leftright.  4 is top, right, bottom, left -->
+}
+
+<style type="text/css">
+	hr {
+	height="10px";
+	background-color=#000099;
+	margin-left="10px";
+	margin-right="10px";
+	margin-top="20px";
+	margin-bottom="20px";
+	}
+</style>
+
+<style type="text/css"> <!-- no breaks in a text line...? -->
+	nobr
+	{
+		white-space: nowrap
+	}
+</style>
+
+<style>
+.float-container
+{
+    border: 2px solid #fff;
+	width: 100%;
+    padding: 1px;
+}
+
+.float-child-left
+{
+    width: 28%;
+    float: left;
+    padding: 2px;
+    border: 2px solid black;
+}  
+
+.float-child-right
+{
+    width: 70%;
+    float: right;
+    padding: 2px;
+    border: 2px solid black;
+}  
+</style>
+
+<!-- see also .special and id -->
