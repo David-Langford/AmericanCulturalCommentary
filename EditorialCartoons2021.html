@@ -52,6 +52,7 @@
 	  	<div class="float-child-left" >
 			Available Cartoons, click to select:
 			<ul id="cartoonList">
+				<input type="radio" name="cartoon" value="4"  checked onclick="handleClick(this);" > Unify the Country <br>
 				<input type="radio" name="cartoon" value="3"  checked onclick="handleClick(this);" > Beloved Administration <br>
 				<input type="radio" name="cartoon" value="2"  checked onclick="handleClick(this);" > Procedural Errors <br>
 				<input type="radio" name="cartoon" value="1"  checked onclick="handleClick(this);" > Masses Revolting <br>
@@ -115,6 +116,9 @@
 					break;
 				case "3":
 					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\WellBelovedAdmin.jpg\" alt=\"Beloved Administration\">";
+					break;
+				case "4":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\UniteTheCountry.jpg\" alt=\"Unify the Country\">";
 					break;
 					
 				default:
