@@ -52,6 +52,7 @@
 	  	<div class="float-child-left" >
 			Available Cartoons, click to select:
 			<ul id="cartoonList">
+				<input type="radio" name="cartoon" value="7"  checked onclick="handleClick(this);" > Famous / Stupid <br>
 				<input type="radio" name="cartoon" value="6"  checked onclick="handleClick(this);" > Ideas have Consequences <br>
 				<input type="radio" name="cartoon" value="5"  checked onclick="handleClick(this);" > Party Unity <br>
 				<input type="radio" name="cartoon" value="4"  checked onclick="handleClick(this);" > Unify the Country <br>
@@ -127,6 +128,9 @@
 					break;
 				case "6":
 					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\IdeasHavConsequences.jpg\" alt=\"Ideas have Consequences\">";
+					break;
+				case "7":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\FamousStupid.jpg\" alt=\"Famous / Stupid\">";
 					break;
 					
 				default:
