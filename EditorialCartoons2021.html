@@ -52,6 +52,7 @@
 	  	<div class="float-child-left" >
 			Available Cartoons, click to select:
 			<ul id="cartoonList">
+				<input type="radio" name="cartoon" value="9"  checked onclick="handleClick(this);" > Slaves at the Border <br>
 				<input type="radio" name="cartoon" value="8"  checked onclick="handleClick(this);" > When Cultures Collied <br>
 				<input type="radio" name="cartoon" value="7"  checked onclick="handleClick(this);" > Famous / Stupid <br>
 				<input type="radio" name="cartoon" value="6"  checked onclick="handleClick(this);" > Ideas have Consequences <br>
@@ -135,6 +136,9 @@
 					break;
 				case "8":
 					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\CulturesCollide.jpg\" alt=\"When Cultures Collide\">";
+					break;
+				case "9":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\SlavesAtTheBorder.jpg\" alt=\"Slaves at the Border\">";
 					break;
 					
 				default:
