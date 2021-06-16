@@ -52,6 +52,7 @@
 	  	<div class="float-child-left" >
 			Available Cartoons, click to select:
 			<ul id="cartoonList">
+				<input type="radio" name="cartoon" value="13" checked onclick="handleClick(this);" > Unqualified for Congress <br>
 				<input type="radio" name="cartoon" value="12" checked onclick="handleClick(this);" > Defund the Constitution <br>
 				<input type="radio" name="cartoon" value="11" checked onclick="handleClick(this);" > Darwin Award <br>
 				<input type="radio" name="cartoon" value="10" checked onclick="handleClick(this);" > Politician versus Cop <br>
@@ -151,6 +152,9 @@
 					break;
 				case "12":
 					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\DefundTheConstitution.jpg\" alt=\"Defund the Constitution\">";
+					break;
+				case "13":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\UnqualifiedForCongress.jpg\" alt=\"Unqualified For Congress\">";
 					break;
 					
 				default:
