@@ -52,6 +52,7 @@
 	  	<div class="float-child-left" >
 			Available Cartoons, click to select:
 			<ul id="cartoonList">
+				<input type="radio" name="cartoon" value="15" checked onclick="handleClick(this);" > Qualified Immunity <br>
 				<input type="radio" name="cartoon" value="14" checked onclick="handleClick(this);" > Critical Race Theory <br>
 				<input type="radio" name="cartoon" value="13" checked onclick="handleClick(this);" > Unqualified for Congress <br>
 				<input type="radio" name="cartoon" value="12" checked onclick="handleClick(this);" > Defund the Constitution <br>
@@ -159,6 +160,9 @@
 					break;
 				case "14":
 					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\CriticalRaceTheory.jpg\" alt=\"Critical Race Theory\">";
+					break;
+				case "15":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2021\\JpegFiles\\QualifiedImmunity.jpg\" alt=\"Qualified Immunity\">";
 					break;
 					
 				default:
