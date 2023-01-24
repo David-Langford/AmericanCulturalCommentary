@@ -1,0 +1,143 @@
+<doctype html>
+<HTML>
+
+<body>
+	<width  : 100%;>
+	<height : 100%;>
+
+	<head>
+		<meta charset="UTF-8" >
+		<meta http-equiv="X-UA-compatible" content="ie=edge" >
+
+		<meta name="viewport"    content="width=device-width, initial-scale=1.0 >
+		<meta name="description" content="U.S. Political Editorial Cartoons">
+		<meta name="keywords"    content="American, Politics, Culture, Satire">
+		<meta name="author"      content="D.W.Langford">
+
+		<link href=".\Styles\main.css" rel="stylesheet">
+		<title>Political and Cultural Reflections Expressed in Satire</title>
+	</head>
+
+	<main>
+	<header>
+		<img src=".\\GraphicDisplay\\PoliticallyUncorrect.jpg" alt="Politically Uncorrect">;
+	</header>
+
+	<!---------- Web page navigation objects. ------------->
+
+	<nav>
+		<a href="index.html">Home</a>
+		&bull;
+		<a href ="Constitution.html">U.S. Constitution Clarified</a>
+		&bull;
+		<a href="EditorialCartoons.html">Editorial Cartoons 2020</a>
+		&bull;
+		<a>Cartoons 2023</a>
+	</nav>
+	
+	<!-- Web page disclaimer. -->
+
+	<hr>
+	The following "humor" is meant to encourage discussion and make you think.  If you find you can neither
+	<BR>
+	discuss nor think, please go elsewhere for your entertainment.  I don't need the aggravation.  Thank you.
+	<hr>
+
+	<!-- Container (div) objects for handling the web page interface. -->
+
+	<div class="float-container">
+
+		<!-- List box of available cartoon graphics. -->
+
+	  	<div class="float-child-left" >
+			Available Cartoons, click to select:
+			<ul id="cartoonList">
+				<input type="radio" name="cartoon" value="2"  checked onclick="handleClick(this);" > Education Failure <br>
+				<input type="radio" name="cartoon" value="1"  checked onclick="handleClick(this);" > Your High-ness <br>
+			</ul>
+	  	</div>
+
+		<!-- Container for jpg file objects. The process used here could not be made to work with PDF files. -->
+
+  		<div class="float-child-right" id="imageDiv">
+//     		<img src=".\GraphicHumor\JpegFiles\MaskWearOrRemove.jpg" alt="MaskWearOrRemove">;
+     		<img src=" " alt=" ">;
+  		</div>
+
+	</div>
+
+	</main>
+
+<!-- ------------ JavaScript code for swapping jpg files into and out of a container object. -->
+
+	<script type="text/javascript">
+
+		// This function will replace the contents of a container object. (unused)
+
+		function ReplaceContentInContainer(id,content)
+		{
+			var container = document.getElementById(id);
+			container.innerHTML = content;
+		}
+
+		// This function will get the event target in a browser-compatible way. (unused)
+
+		function getEventTarget(e)
+		{
+    		e = e || window.event;
+    		return e.target || e.srcElement; 
+		}
+
+		// Primary script for updating the div container with a new image file.
+
+		function handleClick(radioBtn)
+		{
+			// Get the list item that was clicked on (target) and the div object to write to.
+	
+			//var target = getEventTarget(event);
+			var dv = document.getElementById('imageDiv');
+
+			// Create image object to be loaded.
+
+			var nextImage = document.createElement("img");
+
+			// Build the HTML for displaying the selected graphic.  Note use of escape character in text strings, "\".
+			
+			//switch (target.value)
+			switch (radioBtn.value)
+			{
+				case "1":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2023\\JpegFiles\\HighChairs.jpg\" alt=\"Your High-ness\">";
+					break;
+
+				case "2":
+					nextImage = "<img src=\".\\GraphicHumor\\Graphics2023\\JpegFiles\\WokenessFail.jpg\" alt=\"Education Failure\">";
+					break;
+					
+				default:
+					nextImage = "";
+			}
+	
+			// Display the chosen graphic.
+			dv.innerHTML = nextImage;
+			
+		};  
+
+		// Event fires after the page has fully loaded.
+
+        addEventListener('load', (event) => 
+		{
+			// Load the default graphic in the image div.
+
+			var dv = document.getElementById('imageDiv');
+     		var nextImage = document.createElement("img");
+			nextImage = "<img src=\".\\GraphicHumor\\Graphics2023\\JpegFiles\\HighChairs.jpg\" alt=\"Your High-ness\">";
+			dv.innerHTML = nextImage;
+        });
+
+	</script>
+	
+	</body>
+
+</HTML>
+
